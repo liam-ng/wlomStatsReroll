@@ -44,8 +44,20 @@ Note: it will populate a `wlo_config.json` at your exe path after launch. The `w
 
 <img style="width:40%; height:auto;" alt="{14A01915-283E-4E03-BDA8-3E04C2AD3B0A}" src="https://github.com/user-attachments/assets/22eea89c-1c3f-42a4-bb8d-b2b75106215d" />
 
+# Run as a Script
+```
+python venv .venv-wlom
+./.venv-wlom/Scripts/Activate.ps1
 
-## Build
+python -m pip install -r requirements.txt
+
+# You need to manually install Tesseract in your system for the script to work
+# You may find prebuilt .exe from Coro doc
+
+python main.py
+```
+
+# Build
 ```
 pip install pyinstaller
 pyinstaller --onefile --windowed --add-binary "C:/Program Files/Tesseract-OCR;Tesseract-OCR" main.py
