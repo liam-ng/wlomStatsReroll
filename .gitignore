@@ -1,0 +1,6 @@
+.venv*
+build
+dist
+
+main.spec
+wlo_config.json
