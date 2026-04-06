@@ -8,8 +8,8 @@ Uses Tesseract OCR to read the game screen and extract the value gain in (+##) p
 # Install
 
 Only tested in Windows 11:
-1. Download the `Wlom Stats Reroll.exe` from release page.
-2. Open the `Wlom Stats Reroll.exe`.
+1. Download the `Wlom Stats Reroll.zip` from available link(s) in release page.
+2. Extract and Open the `Wlom Stats Reroll.exe`.
 
 Note: it will populate a `wlo_config.json` at your exe path after launch. The `wlo_config.json` will store the last used coordinates.
 
@@ -40,7 +40,9 @@ Note: it will populate a `wlo_config.json` at your exe path after launch. The `w
 9. 按下 F9 鍵即可開始或停止自動執行。
 
 ## VirusTotal
-[VirusTotal](https://www.virustotal.com/gui/file/ebe4dc270f7021fc79da4a4c2bfc1152fb7aa670454e690d29f8d171db7c90e7/detection)
+[VirusTotal](https://www.virustotal.com/gui/file/ebe4dc270f7021fc79da4a4c2bfc1152fb7aa670454e690d29f8d171db7c90e7/detection) 
+
+Use at your own risk. 
 
 <img style="width:40%; height:auto;" alt="{14A01915-283E-4E03-BDA8-3E04C2AD3B0A}" src="https://github.com/user-attachments/assets/22eea89c-1c3f-42a4-bb8d-b2b75106215d" />
 
