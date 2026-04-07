@@ -10,11 +10,6 @@ Uses Tesseract OCR to read the in-game screen and extract the value gain in (+##
 
 Only tested in Windows 10 & 11.
 
-## Lite Version
-1. Download and Install [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki). Additional [guide](https://docs.coro.net/featured/agent/install-tesseract-windows) on Tesseract installation.
-2. Download the `Wlom Stats Reroll Lite.zip` from the release page.
-3. Extract and Run the `Wlom Stats Reroll Lite.exe`.
-
 ## All-in-one Bundled Version
 1. Download the `WLOM Stats Reroller Bundled.zip` from the release page.
 2. Extract and Run the `WLOM Stats Reroller Bundled.exe`.
@@ -56,6 +51,9 @@ Application will prompt and stop automatically once the target is met.
 9. 按下 F9 鍵即可開始或停止自動執行。
 
 # Run as a Script
+
+Prerequisite: Download and Install [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki). Additional [guide](https://docs.coro.net/featured/agent/install-tesseract-windows) on Tesseract installation.
+
 ```
 python venv .venv-wlom
 ./.venv-wlom/Scripts/Activate.ps1
@@ -63,19 +61,15 @@ python venv .venv-wlom
 python -m pip install -r requirements.txt
 
 # You need to manually install Tesseract in your system for the script to work
-# You may find prebuilt .exe from Coro doc
-
 python main.py
 ```
 
 # Build
+
+Prerequisite: [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki).
+
 ```
 pip install pyinstaller
-
-# Lite
-pyinstaller --onefile --windowed main.py
-
-# All-in-one
 pyinstaller --onefile --windowed --add-binary "C:/Program Files/Tesseract-OCR;Tesseract-OCR" main.py
 ```
 
