@@ -73,6 +73,14 @@ pip install pyinstaller
 pyinstaller --onefile --windowed --add-binary "C:/Program Files/Tesseract-OCR;Tesseract-OCR" main.py
 ```
 
+# Credit
+
+This application utilizes the following open-source software:
+  
+-  [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) - An optical character recognition engine. Licensed under the Apache License 2.0.
+-  Leptonica - An image processing and analysis library used by Tesseract.
+-  License: Distributed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+
 # Disclaimer
 
 This tool is for educational purposes only. The author is not responsible for any consequences resulting from the use of this software, including game bans or data loss. Use of third-party automation is a violation of most game's terms of service. Use at your own discretion.
