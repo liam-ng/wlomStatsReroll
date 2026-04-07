@@ -6,9 +6,9 @@ Uses Tesseract OCR to read the in-game screen and extract the value gain in (+##
 
 <img alt="{3A8B4DA5-1965-455B-9E25-546A55362A1C}" src="https://github.com/user-attachments/assets/42ed8aa1-34cb-46a8-a7ea-1f4342bcace9" style="width:20%; height:auto;" />
 
-# Install
+# Installation
 
-Only tested in Windows 11.
+Only tested in Windows 10 & 11.
 
 ## Lite Version
 1. Download and Install [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki). Additional [guide](https://docs.coro.net/featured/agent/install-tesseract-windows) on Tesseract installation.
@@ -35,6 +35,12 @@ Note: it will populate a `wlo_config.json` at your exe path after launch. The `w
 10. Press F9 to start/stop.
 
 <img style="width:80%; height:auto;" alt="image" src="https://github.com/user-attachments/assets/5423050a-9e59-466a-9503-4ee95ab21b1b" />
+
+Application will prompt and stop automatically once the target has been met.
+
+<img style="width:auto; height:20%;" alt="{F94A5ED6-4B62-42CB-A3E8-E026550BF7B6}" src="https://github.com/user-attachments/assets/7d89e5e1-9bd7-456f-ba27-5156c359449f" />
+
+
 
 # 使用教學
 
