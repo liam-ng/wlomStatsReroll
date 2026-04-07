@@ -1,15 +1,17 @@
+import keyboard
+import mouse
+import json
+import os
+import time
 import tkinter as tk
 from tkinter import messagebox
 import threading
-import keyboard
+import re
+
 import pyautogui
 import pytesseract
-import re
-import mouse
-import json
-import sys
-import os
 from PIL import Image
+import hashlib
 
 # absolute path to the bundled Tesseract
 def resource_path(relative_path):
@@ -30,7 +32,7 @@ CONFIG_FILE = "wlo_config.json"
 class BotGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("WLOM Stat Roller Pro")
+        self.root.title("WLOM Stats Roller Bundled v1.1.0")
         self.root.geometry("320x480")
         self.root.attributes("-topmost", True)
 
@@ -145,20 +147,59 @@ class BotGUI:
 
     def get_con_value(self):
         if not self.con_region: return 0
+
         screenshot = pyautogui.screenshot(region=self.con_region)
         screenshot = screenshot.resize((screenshot.width * 4, screenshot.height * 4), Image.LANCZOS)
-        text = pytesseract.image_to_string(screenshot, config='--psm 7 -c tessedit_char_whitelist=0123456789+()')
-        matches = re.findall(r'\+(\d+)', text)
-        return int(matches[0]) if matches else 0
 
+        text = pytesseract.image_to_string(screenshot, config='--psm 6 -c tessedit_char_whitelist=0123456789+')
+        matches = re.findall(r'\+(\d{1,3})', text)
+
+        if matches:
+            stat_values = [int(m) for m in matches]
+            
+            self.status_label.config(text=f"Last Read: +{stat_values}", fg="blue")
+            
+            return max(stat_values)
+        return 0
+
+    
+    def wait_for_pixel_change(self, region, timeout=1.5):
+        """
+        Captures a small snapshot and waits for the pixels to differ 
+        from the initial state.
+        """
+        initial_img = pyautogui.screenshot(region=region)
+        initial_hash = hashlib.md5(initial_img.tobytes()).hexdigest()
+        
+        start_time = time.time()
+        while time.time() - start_time < timeout:
+            if not self.is_running:
+                return False
+                
+            current_img = pyautogui.screenshot(region=region)
+            current_hash = hashlib.md5(current_img.tobytes()).hexdigest()
+            
+            if current_hash != initial_hash:
+                self.update_instr("Update detected, reading stats...", "green")
+                time.sleep(0.05) 
+                return True
+                
+            self.update_instr("Warning: No value changes detected!", "orange")
+            time.sleep(0.02) 
+        return False # Timeout
+    
     def validate_int(self, input):
         if input.isdigit() and int(input) > 0:
+            self.update_instr("")
             return True
+        self.update_instr("Invalid Target: Must be a positive integer!", "red")
         return False
     
     def validate_float(self, input):
         if input.replace('.', '', 1).isdigit() and float(input) > 0:
+            self.update_instr("")
             return True
+        self.update_instr("Invalid Interval: Must be a positive number!", "red")
         return False
     
     def run_loop(self):
@@ -171,30 +212,28 @@ class BotGUI:
             return
 
         while self.is_running:
-            if not self.redist_pos or not self.con_region:
-                self.is_running = False
-                break
-
+            pyautogui.click(self.redist_pos)
+            # Wait for the pixel to change (Pixel-Hash Wait)
+            if not self.wait_for_pixel_change(self.con_region):
+                continue
+                
             val = self.get_con_value()
-            self.status_label.config(text=f"Last Read: +{val}", fg="blue")
 
             if val >= target:
                 self.is_running = False
                 self.status_label.config(text=f"TARGET REACHED! {val}", fg="green")
                 messagebox.showinfo("Success", f"Target met! Found +{val}")
                 break
-            else:
-                pyautogui.click(self.redist_pos)
+            # else:
+            #     pyautogui.click(self.redist_pos)
             
-            pyautogui.sleep(inter) # Wait for server/animation roll
+            pyautogui.sleep(inter)
 
     def toggle_script(self):
         if not self.is_running:
             if not self.validate_int(self.target_entry.get()):
-                self.update_instr("Invalid Target: Must be a positive integer!", "red")
                 return
             if not self.validate_float(self.interval_entry.get()):
-                self.update_instr("Invalid Interval: Must be a positive number!", "red")
                 return
             self.is_running = True
             self.status_label.config(text="Status: RUNNING...", fg="red")
