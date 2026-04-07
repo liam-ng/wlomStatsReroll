@@ -33,6 +33,7 @@ Note: it will populate a `wlo_config.json` at your exe path after launch. The `w
 > Note: do not set `Interval` too low or it might skip.
 9. Make sure the game window is at the top and values are visible.
 10. Press F9 to start/stop.
+> You must keep the in-game screen opened and keep the number(s) visible. 
 
 <img style="width:80%; height:auto;" alt="image" src="https://github.com/user-attachments/assets/869edc90-24f4-481e-b699-032af11ce410" />
 
