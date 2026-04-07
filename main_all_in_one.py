@@ -7,12 +7,22 @@ import pytesseract
 import re
 import mouse
 import json
+import sys
 import os
 from PIL import Image
 
-# Require Tesseract OCR to be installed in your system
-# Require Tesseract OCR to be installed in your system
-# Require Tesseract OCR to be installed in your system
+# absolute path to the bundled Tesseract
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
+
+# Point to the bundled Tesseract
+tesseract_exe = resource_path(os.path.join("Tesseract-OCR", "tesseract.exe"))
+pytesseract.pytesseract.tesseract_cmd = tesseract_exe
 
 # Configuration file name
 CONFIG_FILE = "wlo_config.json"

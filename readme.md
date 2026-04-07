@@ -1,17 +1,24 @@
 # Wonderland Online Mobile Stats Reroll (飄流幻境M 夥伴轉生自動亂數分配)
 
 A simple script to reroll pet's reincarnated stats until getting the desired value.
-Uses Tesseract OCR to read the game screen and extract the value gain in (+##) pattern.
+Uses Tesseract OCR to read the in-game screen and extract the value gain in (+##) pattern.
 
 <img alt="{3A8B4DA5-1965-455B-9E25-546A55362A1C}" src="https://github.com/user-attachments/assets/42ed8aa1-34cb-46a8-a7ea-1f4342bcace9" style="width:20%; height:auto;" />
 
 # Install
 
-Only tested in Windows 11:
-1. Download the `Wlom Stats Reroll.zip` from available link(s) in release page.
-2. Extract and Open the `Wlom Stats Reroll.exe`.
+Only tested in Windows 11.
 
-Note: it will populate a `wlo_config.json` at your exe path after launch. The `wlo_config.json` will store the last used coordinates.
+## Lite Version
+1. Download and Install [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki). Additional [guide](https://docs.coro.net/featured/agent/install-tesseract-windows) on Tesseract installation.
+2. Download the `Wlom Stats Reroll Lite.exe` from the release page.
+3. Run the `Wlom Stats Reroll Lite.exe`.
+
+## All-in-one Bundled Version
+1. Download the `WLOM Stats Reroller Bundled.zip` from available link(s) in release page.
+2. Extract and Open the `WLOM Stats Reroller Bundled.exe`.
+
+Note: it will populate a `wlo_config.json` at your exe path after launch. The `wlo_config.json` stores the last used coordinates.
 
 # How to Use
 
@@ -24,6 +31,8 @@ Note: it will populate a `wlo_config.json` at your exe path after launch. The `w
 7. Set `Interval` to speed up or down if your system allowed.
 8. Make sure the game window is at the top and values are visible.
 9. Press F9 to start/stop.
+
+Note: do not set `Interval` too low otherwise it might skip.
 
 <img style="width:80%; height:auto;" alt="image" src="https://github.com/user-attachments/assets/5423050a-9e59-466a-9503-4ee95ab21b1b" />
 
@@ -62,6 +71,11 @@ python main.py
 # Build
 ```
 pip install pyinstaller
+
+# Lite
+pyinstaller --onefile --windowed main.py
+
+# All-in-one
 pyinstaller --onefile --windowed --add-binary "C:/Program Files/Tesseract-OCR;Tesseract-OCR" main.py
 ```
 
