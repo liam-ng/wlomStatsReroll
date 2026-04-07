@@ -1,6 +1,7 @@
 # Wonderland Online Mobile Stats Reroll (飄流幻境M 夥伴轉生自動亂數分配)
 
 A simple script to reroll pet's reincarnated stats until getting the desired value.
+
 Uses Tesseract OCR to read the in-game screen and extract the value gain in (+##) pattern.
 
 <img alt="{3A8B4DA5-1965-455B-9E25-546A55362A1C}" src="https://github.com/user-attachments/assets/42ed8aa1-34cb-46a8-a7ea-1f4342bcace9" style="width:20%; height:auto;" />
@@ -29,10 +30,10 @@ Note: it will populate a `wlo_config.json` at your exe path after launch. The `w
 5. Click on the bottom right of the same stat you picked.
 6. Set `Target Gain` to desired value.
 7. Set `Interval` to speed up or down if your system allowed.
-8. Make sure the game window is at the top and values are visible.
-9. Press F9 to start/stop.
 
-Note: do not set `Interval` too low otherwise it might skip.
+   Note: do not set `Interval` too low or it might skip.
+9. Make sure the game window is at the top and values are visible.
+10. Press F9 to start/stop.
 
 <img style="width:80%; height:auto;" alt="image" src="https://github.com/user-attachments/assets/5423050a-9e59-466a-9503-4ee95ab21b1b" />
 
@@ -49,9 +50,11 @@ Note: do not set `Interval` too low otherwise it might skip.
 9. 按下 F9 鍵即可開始或停止自動執行。
 
 ## VirusTotal
-[VirusTotal](https://www.virustotal.com/gui/file/ebe4dc270f7021fc79da4a4c2bfc1152fb7aa670454e690d29f8d171db7c90e7/detection) 
+[VirusTotal](https://www.virustotal.com/gui/file/c50c66d2c35efa33b2ff0a3ce1ae6d7beac355a52091ca727737c4b1c1541cf1/detection) 
 
-Use at your own risk. 
+Use at your own risk. In case your security software flag the exe as malicious, I recommend AGAINST executing the exe. 
+
+If you have the technical know-how, follow `Run as a Script` instead. 
 
 <img style="width:40%; height:auto;" alt="{14A01915-283E-4E03-BDA8-3E04C2AD3B0A}" src="https://github.com/user-attachments/assets/22eea89c-1c3f-42a4-bb8d-b2b75106215d" />
 
