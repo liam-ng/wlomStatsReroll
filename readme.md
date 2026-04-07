@@ -34,9 +34,9 @@ Note: it will populate a `wlo_config.json` at your exe path after launch. The `w
 9. Make sure the game window is at the top and values are visible.
 10. Press F9 to start/stop.
 
-<img style="width:80%; height:auto;" alt="image" src="https://github.com/user-attachments/assets/5423050a-9e59-466a-9503-4ee95ab21b1b" />
+<img style="width:80%; height:auto;" alt="image" src="https://github.com/user-attachments/assets/869edc90-24f4-481e-b699-032af11ce410" />
 
-Application will prompt and stop automatically once the target has been met.
+Application will prompt and stop automatically once the target is met.
 
 <img style="width:auto; height:20%;" alt="{F94A5ED6-4B62-42CB-A3E8-E026550BF7B6}" src="https://github.com/user-attachments/assets/7d89e5e1-9bd7-456f-ba27-5156c359449f" />
 
