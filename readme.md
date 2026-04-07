@@ -79,10 +79,6 @@ This tool is for educational purposes only. The author is not responsible for an
 
 Use at your own risk. 
 
-Use at your own risk. 
-
-Use at your own risk. 
-
 AI code generation is used to create this application. This software is provided "as is" and "with all faults," without any warranty of any kind, express or implied. The developers make no representations or warranties regarding the accuracy, reliability, or completeness of the application.
 
 The use of automation tools may violate the Terms of Service (ToS) of "Wonderland Online Mobile" or its related platforms. By using this software, you acknowledge that you are doing so at your own risk. This includes, but is not limited to, the risk of game account suspension, permanent bans, or loss of in-game data.
