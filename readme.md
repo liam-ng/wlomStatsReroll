@@ -12,12 +12,12 @@ Only tested in Windows 11.
 
 ## Lite Version
 1. Download and Install [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki). Additional [guide](https://docs.coro.net/featured/agent/install-tesseract-windows) on Tesseract installation.
-2. Download the `Wlom Stats Reroll Lite.exe` from the release page.
-3. Run the `Wlom Stats Reroll Lite.exe`.
+2. Download the `Wlom Stats Reroll Lite.zip` from the release page.
+3. Extract and Run the `Wlom Stats Reroll Lite.exe`.
 
 ## All-in-one Bundled Version
-1. Download the `WLOM Stats Reroller Bundled.zip` from available link(s) in release page.
-2. Extract and Open the `WLOM Stats Reroller Bundled.exe`.
+1. Download the `WLOM Stats Reroller Bundled.zip` from the release page.
+2. Extract and Run the `WLOM Stats Reroller Bundled.exe`.
 
 Note: it will populate a `wlo_config.json` at your exe path after launch. The `wlo_config.json` stores the last used coordinates.
 
@@ -47,15 +47,6 @@ Note: it will populate a `wlo_config.json` at your exe path after launch. The `w
 7. 根據順暢度調整 Interval（間隔時間）來加快或減慢速度。
 8. 確保遊戲視窗位於最上層，且屬性數值清晰可見。
 9. 按下 F9 鍵即可開始或停止自動執行。
-
-## VirusTotal
-[VirusTotal](https://www.virustotal.com/gui/file/c50c66d2c35efa33b2ff0a3ce1ae6d7beac355a52091ca727737c4b1c1541cf1/detection) 
-
-Use at your own risk. In case your security software flag the exe as malicious, I recommend AGAINST executing the exe. 
-
-If you have the technical know-how, follow `Run as a Script` instead. 
-
-<img style="width:40%; height:auto;" alt="{14A01915-283E-4E03-BDA8-3E04C2AD3B0A}" src="https://github.com/user-attachments/assets/22eea89c-1c3f-42a4-bb8d-b2b75106215d" />
 
 # Run as a Script
 ```
