@@ -26,7 +26,6 @@ Note: it will populate a `wlo_config.json` at your exe path after launch. The `w
 5. Click on the bottom right of the same stat you picked.
 6. Set `Target Gain` to desired value.
 7. Set `Interval` to speed up or down if your system allowed.
-> Note: do not set `Interval` too low or it might skip.
 9. Make sure the game window is at the top and values are visible.
 10. Press F9 to start/stop.
 > You must keep the in-game screen opened and keep the number(s) visible. 
@@ -35,7 +34,7 @@ Note: it will populate a `wlo_config.json` at your exe path after launch. The `w
 
 Application will prompt and stop automatically once the target is met.
 
-<img style="width:auto; height:20%;" alt="{F94A5ED6-4B62-42CB-A3E8-E026550BF7B6}" src="https://github.com/user-attachments/assets/7d89e5e1-9bd7-456f-ba27-5156c359449f" />
+<img style="width:auto; height:15%;" alt="{F94A5ED6-4B62-42CB-A3E8-E026550BF7B6}" src="https://github.com/user-attachments/assets/7d89e5e1-9bd7-456f-ba27-5156c359449f" />
 
 
 
