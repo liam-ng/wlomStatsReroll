@@ -2,7 +2,8 @@
 
 A simple script to reroll pet's reincarnated stats until getting the desired value.
 
-Uses Tesseract OCR to read the in-game screen and extract the value gain in (+##) pattern.
+- No injection: does not read game files or in-memory values. No risks of a game ban but use at own discretion.
+- Uses Tesseract OCR technology: read the in-game screen and extract the value gain in (+##) pattern.
 
 <img alt="{3A8B4DA5-1965-455B-9E25-546A55362A1C}" src="https://github.com/user-attachments/assets/42ed8aa1-34cb-46a8-a7ea-1f4342bcace9" style="width:20%; height:auto;" />
 
